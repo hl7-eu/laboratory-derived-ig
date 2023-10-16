@@ -1,0 +1,11 @@
+{
+    "name": "myhealth.eu.fhir.template",
+    "version": "0.0.1",
+    "type": "fhir.template",
+    "license": "CC0-1.0",
+    "description": "MyHealth@EU FHIR Template",
+    "base": "fhir.base.template",
+    "dependencies": {
+      "fhir.base.template": "current"
+    }
+}

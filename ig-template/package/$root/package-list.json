@@ -1,0 +1,15 @@
+{
+  "package-id" : "hl7.eu.fhir.myhealth.lab",
+  "title" : "MyHealth@EU FHIR IG: Laboratory report",
+  "canonical" : "http://myhealth.eu/fhir/laboratory",
+  "introduction" : "This guide describes how the Laboratory Report can be represented for the purpose of MyHealth@EU experimantions.",
+  "list" : [
+    {
+      "version" : "current",
+      "desc" : "Continuous Integration Build (latest in version control)",
+      "path" : "http://build.myhealth.eu/fhir/laboratory",
+      "status" : "ci-build",
+      "current" : true
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+<link href="{{site.data.info.assets}}assets/css/ehdsi.css" rel="stylesheet"/>
+<link href="{{site.data.info.assets}}assets/css/MyOrgJur.css" rel="stylesheet"/>
+
+{% if bundle.id %}
+    <b>Id:</b>
+    {{ bundle.id }}{% endif %}
+<br/>
+
+{% assign compositionResource = bundle.entry | where: "resource.resourceType", "Composition" | first %}
+{% assign composition = compositionResource.resource %}
+
+{% if composition.status %}
+    <b>Composition status:</b>
+    {{ composition.status }}{% endif %}
+<br/>
+{% if composition.type %}
+    <b>Composition Type:</b>
+    {{ composition.type.coding[0].display }}{% endif %}
+<br/>
+
+<b>DiagnosticReport:</b>
+<div class="diagnosticReport block indent">
+
+    {% assign diagnosticRep = bundle.entry | where: "resource.resourceType", "DiagnosticReport" | first %}
+    {% assign dr = diagnosticRep.resource %}
+    {% if dr.id %}
+        <b>Identifier:</b>
+        {{ dr.id }}<br/>{% endif %}
+    {% if dr.status %}
+        <b>Status:</b>
+        {{ dr.status }}<br/>{% endif %}
+    {% if dr.category %}
+        <b>Category:</b>
+        {{ dr.category[0].coding[0].code }}<br/>{% endif %}
+    {% if dr.category %}
+        <b>Code:</b>
+        {{ dr.code.coding[0].display }}<br/>{% endif %}
+    {% if dr.effectiveDateTime %}
+        <b>Time:</b>
+        {{ dr.effectiveDateTime }}<br/>{% endif %}
+    {% if dr.performer %}
+        <b>Performer:</b>
+        {{ dr.performer[0].display }}<br/>{% endif %}
+</div>
+
+<b>Subject:</b>
+<div class="patient block indent">
+
+    {% assign subr = bundle.entry | where: "resource.resourceType", "Patient" | first %}
+    {% assign pat = subr.resource %}
+    {% if pat.identifier %}
+        <b>Identifier:</b>
+        {{ pat.identifier[0].value }}<br/>{% endif %}
+    {% if pat.name %}
+        <b>Name:</b>
+        {{ pat.name[0].given[0] }} {{ pat.name[0].family }}<br/>{% endif %}
+    {% if pat.active %}
+        <b>active:</b>
+        {{ pat.active }}<br/>{% endif %}
+    {% if pat.gender %}
+        <b>Gender:</b>
+        {{ pat.gender }}<br/>{% endif %}
+    {% if pat.birthDate %}
+        <b>Birth Date:</b>
+        {{ pat.birthDate }}<br/>{% endif %}
+
+</div>
+
+<b>ServiceRequest:</b>
+<div class="serviceRequest block indent">
+
+    {% assign srr = bundle.entry | where: "resource.resourceType", "ServiceRequest" | first %}
+    {% assign sr = srr.resource %}
+    {% if sr.id %}
+        <b>Identifier:</b>
+        {{ sr.id }}<br/>{% endif %}
+    {% if sr.status %}
+        <b>Status:</b>
+        {{ sr.status }}<br/>{% endif %}
+    {% if sr.intent %}
+        <b>Intent:</b>
+        {{ sr.intent }}<br/>{% endif %}
+    {% if sr.code %}
+        <b>Code:</b>
+        {{ sr.code.coding[0].display }}<br/>{% endif %}
+    {% if sr.subject %}
+        <b>Subject:</b>
+        {{ sr.subject.reference }}<br/>{% endif %}
+    {% if sr.specimen %}
+        <b>Specimen:</b>
+        {{ sr.specimen[0].reference }}<br/>{% endif %}
+</div>
+
+<b>Observations:</b>
+<div class="observation block indent">
+
+    {% assign obsr = bundle.entry | where: "resource.resourceType", "Observation" | first %}
+    {% assign obr = obsr.resource %}
+    {% if obr.id %}
+        <b>Identifier:</b>
+        {{ obr.id }}<br/>{% endif %}
+    {% if obr.status %}
+        <b>Status:</b>
+        {{ obr.status }}<br/>{% endif %}
+    {% if obr.category %}
+        <b>Category:</b>
+        {{ obr.category[0].coding[0].code }}<br/>{% endif %}
+    {% if obr.effectiveDateTime %}
+        <b>Time:</b>
+        {{ obr.effectiveDateTime }}<br/>{% endif %}
+    {% if obr.performer %}
+        <b>Performer:</b>
+        {{ obr.performer[0].display }}<br/>{% endif %}
+    {% if obr.valueCodeableConcept %}
+        <b>Value:</b>
+        {{ obr.valueCodeableConcept.coding[0].display }}<br/>{% endif %}
+</div>
+
+<br/>
+<h3>Sections:</h3>
+<br/>
+
+{% for sec in composition.section %}
+    <h4>{{ sec.title }}</h4>
+
+    <div class="section block indent">
+
+        {% if sec.code %}
+            <b>Code:</b>
+            {{ sec.code.coding[0].display }}<br/>{% endif %}
+
+        {% for entry in sec.entry %}
+            <div class="entry block indent">
+            <h4>{{ entry.reference }}</h4>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+{% endfor %}

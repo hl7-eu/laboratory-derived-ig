@@ -1,0 +1,76 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lang="en">
+  <a name="IG guidance"/>
+  <h3>How to use this template </h3>
+  <p>
+    <b>Remove this section from the actual derived FHIR IG</b>
+  </p>
+  <p>
+This template has been created to help organizations to specify FHIR IG Laboratory Report derived from the HL7 Europe Laboratory Report FHIR IG.
+  </p>
+  <p>
+Users are suggested to follow these steps:
+    <ul>
+      <li>Verify you are able to compile this guide template as "it is".
+        <ul>
+          <li>run the _updatePublisher script</li>
+          <li>run the _genonce script</li>
+        </ul>
+      </li>
+      <li>Update the sushi-config-yaml  and the ig.ini file assigning actual values (see <a href="https://fshschool.org/docs/sushi/configuration">
+instructions</a> ) and recompile</li>
+    <li>Start updating profiles (input/fsh/profiles folder) and terminologies (input/fsh/terminologies folder) and recompile
+      <ul>
+        <li>both are defined using the FHIR Shorthand (FSH) language</li>
+        <li>Refer to the FHIR Shorthand <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/overview.html">specifications </a> and <a herf="https://fshschool.org/docs/sushi/">school</a> for details</li>
+      </ul>
+    </li>
+    <li>Edit and add pages, and recompile<ul>
+      <li>pages are in the folder input\pagecontent</li>
+      <li>added pages have to be listed in the sushi-config-yaml file 'pages:' section</li>
+      <li>added pages have to be referred in the menu in the sushi-config-yaml file 'menu:' section</li>
+    </ul>
+  </li>
+  <li>Update the logos and the 'look and feel' of the guide, and recompile it:
+    <ul>
+      <li>logos are in the folder ig-template\package\content\assets\images</li>
+      <li>The guide css is in the folder ig-template\package\content\assets\css (example named myOrg.css)</li>
+    </ul>
+  </li>
+</ul>
+</p>
+<a name="scope"/>
+<h3>Scope</h3>
+<p>
+    This is the [MyOrg] [Juriisdiction] HL7 FHIR Implementation Guide specifying the FHIR conformance resources needed for the <b>Laboratory Report</b> Use Case.
+</p>
+<p>
+    The specification herewith documented is a demo working specification, and may not be used for any implementation purposes. 
+    No liability can be inferred from the use or misuse of this specification, or its consequences.
+</p>
+<a name="project"/>
+<h3>The project</h3>
+<p>Add here the project description</p>
+<h3>Dependencies</h3>
+
+{% include dependency-table.xhtml %}
+
+<a name="x-versions"/>
+<h3>Cross Version Analysis</h3>
+
+{% include cross-version-analysis.xhtml %}
+
+<a name="global"/>
+<h3>Global Profiles</h3>
+
+{% include globals-table.xhtml %}
+
+
+<a name="ip-statements"/>
+<h3>IP Statements</h3>
+
+{% include ip-statements.xhtml %}
+
+<a name="authors"/>
+<h3>Authors and Contributors</h3>
+</div>

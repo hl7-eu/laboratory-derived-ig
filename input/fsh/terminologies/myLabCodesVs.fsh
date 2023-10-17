@@ -8,8 +8,7 @@ Title: "Local Laboratory Codes VS"
 Description: "Local laboratory codes Value Set"
 //-------------------------------------------------------------------------------------------
 * ^experimental = true
-* codes from system http://myhealth.eu/fhir/laboratory/CodeSystem/laboratory-local-cs
-
+* codes from system MyLabCodesCCs
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 CodeSystem: MyLabCodesCCs

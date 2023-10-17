@@ -11,7 +11,7 @@ Parent: $Practitioner-eu-lab
 // Parent:  MyLocalPractitionerProfile
 Id:       Practitioner-lab-jur // or -lab-myorg-jur
 Title:    "Practitioner"
-Description: "This profile defines how to represent Practitioners in FHIR for the purpose of MyHealth@EU."
+Description: "This profile defines how to represent Practitioners in FHIR for the purpose of [MyOrg] [Jurisdiction]."
 
 //-------------------------------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ Parent: $PractitionerRole-eu-lab
 // Parent:  MyLocalPractitionerRoleProfile
 Id:       PractitionerRole-lab-jur // or -lab-myorg-jur
 Title:    "PractitionerRole"
-Description: "This profile defines how to represent Practitioners (with thier roles) in FHIR for the purpose of MyHealth@EU."
+Description: "This profile defines how to represent Practitioners (with thier roles) in FHIR for the purpose of [MyOrg] [Jurisdiction]."
 
 //-------------------------------------------------------------------------------------------
 

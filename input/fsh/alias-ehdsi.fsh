@@ -1,33 +1,18 @@
 //============== ALIAS ===============
 
 // --- Code Systems
-Alias: $ajcc = http://cancerstaging.org
-Alias: $atc = http://www.whocc.no/atc
-Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
-Alias: $edqm = https://standardterms.edqm.eu
-Alias: $iccc3 = http://terminology.hl7.org/CodeSystem/iccc-3 // FAKE URL NOT YET ASSIGNED !!
-Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $loinc =  http://loinc.org
-Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $sct = http://snomed.info/sct
 Alias: $ucum =  http://unitsofmeasure.org
 Alias: $v3-AdministrativeGender =  http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
 
-Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
-
-Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $v3-NullFlavor = http://terminology.hl7.org/CodeSystem/v3-NullFlavor
-Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 
 Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 
 // --- Value Sets
-Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFlavor
 
 Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
@@ -35,18 +20,14 @@ Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/Valu
 
 // ---- Extensions
 
-Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
-Alias: $patient-mothersMaidenName = http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName
-Alias: $event-statusReason = http://hl7.org/fhir/StructureDefinition/event-statusReason
-Alias: $procedure-method = http://hl7.org/fhir/StructureDefinition/procedure-method
-Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
-Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
-// Alias: $composition-diagnostic-report-reference = http://myhealth.eu/fhir/laboratory/StructureDefinition/composition-DiagnosticReportReference
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 
-// --- Profiles
-
 Alias: $imposeProfile = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
+
+Alias: $SD-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
+// --- IPS Profiles
+
 
 Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
 Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
@@ -75,7 +56,7 @@ Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $SD-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
 
 Alias: $Range-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
 Alias: $Ratio-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips
